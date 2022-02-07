@@ -1,7 +1,7 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin =require('html-webpack-plugin');
+// const HtmlWebpackPlugin =require('html-webpack-plugin');
 // const webpack =require('webpack');
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
   plugins:[
     new MiniCssExtractPlugin(), 
     new Dotenv({ systemvars: true }),
-    new HtmlWebpackPlugin({template:'./src/index.html'})
+    // new HtmlWebpackPlugin({template:'./src/index.html'})
   ],
   module: {
     rules: [
