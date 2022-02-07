@@ -6,7 +6,7 @@ import ReactTooltip from 'react-tooltip'
 
 import Descriptors from '@components/Descriptors'
 import fetch from 'node-fetch'
-import axios from 'axios';
+// import axios from 'axios';
 
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
