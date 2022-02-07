@@ -1,0 +1,8 @@
+.background {
+  /*background-color: var(--violet);*/
+  /*background-image: url('./res/img/fon.jpg');*/
+  background-image: url('./res/img/fon_white_2.jpg');
+  min-height: 100vh;
+  padding-top: 36px;
+  padding-bottom: 56px;
+}

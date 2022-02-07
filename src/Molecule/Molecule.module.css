@@ -1,0 +1,67 @@
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 32px auto;
+  width: var(--content-width);
+}
+
+.h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.h2 + .h2 {
+  margin-left: 40px;
+}
+
+.h3 {
+  font-size: 1.1em;
+  margin-top: 16px;
+  max-width: 100%;
+  padding-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.editMolecule {
+  flex-grow: 1;
+  margin-right: 8px;
+  line-height: 2em;
+}
+
+.saveButton {
+  border: 1px solid var(--superiority);
+  margin-top: -4px;
+  margin-bottom: 8px;
+}
+.tokenContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.tokenId {
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  margin-bottom: 32px;
+}
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.processingCopy {
+  width: 500px;
+}
+
+.okay {
+  border: 1px solid var(--superiority);
+  margin-top: 16px;
+}

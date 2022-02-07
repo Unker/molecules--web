@@ -1,0 +1,50 @@
+.showcaseContainer {
+  margin: 32px auto;
+  width: var(--content-width);
+  border-radius: 50px 50px 50px 50px;
+
+}
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 16px;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moleculeCount {
+  padding-top: 5px;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+
+}
+
+.shareButton {
+  position: absolute;
+  top: 6px;
+  right: -24px;
+  font-size: 0.8em;
+  color: grey;
+}
+
+.titleContainer {
+  position: relative;
+}
+
+.bg {
+    background-size:cover;
+    /*background-image: url('../../res/img/3737837.jpg');*/
+    background-repeat: repeat;
+}

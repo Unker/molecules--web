@@ -1,0 +1,44 @@
+:root {
+  --baby-powder: #fcfef6;
+  --content-width: 83vw;
+  --corn: #f2e86d;
+  --grey: #d4d4d4;
+  --green: #3BF0A7;
+  --mandarin: #ed7e4b;
+  --superiority: #669bbc;
+  --violet: #453d52;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Fira Mono', monospace;
+}
+
+p {
+  line-height: 24px;
+}
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 14px;
+    line-height: 1.3em;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#WEB3_CONNECT_MODAL_ID {
+  position: relative;
+  z-index: 10;
+}
+
+.ReactModalPortal {
+  position: relative;
+  z-index: 1000;
+}
+
+.ReactModalPortal > div {
+  background-color: rgba(0, 0, 0, 0.50) !important;
+}

@@ -1,0 +1,63 @@
+.largeButton {
+  display: block;
+  font-size: 24px;
+  border-radius: 20px;
+  margin: 48px auto;
+  height: 64px;
+  width: var(--content-width);
+  color: var(--violet);
+}
+
+.mintButton {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.warning {
+  color: var(--mandarin);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.salePausedButton {
+  background-color: var(--baby-powder);
+  border-color: var(--baby-powder);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.row > * {
+  flex-basis: calc(50% - 8px);
+}
+
+.input {
+  font-family: Fira Mono;
+}
+
+.generateButton {
+  background: var(--superiority);
+  border-radius: 3px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: Fira Mono;
+  padding: 8px;
+}
+
+.generateButton:focus {
+  outline: none;
+}
+
+.submit {
+  background-color: var(--corn);
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-family: Fira Mono;
+  padding: 16px;
+  width: 100%;
+}

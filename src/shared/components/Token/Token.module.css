@@ -1,0 +1,66 @@
+.tokenContainer {
+  background: white;
+  border-radius: 2px;
+  border: 5px solid var(--bs-white);
+  box-shadow: 5px 5px var(--bs-body-font-size);
+  margin: 24px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue","Source Sans Pro",sans-serif;
+  font-size: 16px;
+  color: #212121;
+  line-height: 1.15;
+}
+
+.token {
+/*  background: black;
+  color: white;*/
+  align-items: left;
+  font-weight: bold;
+  font-family: 'Unimono', monospace;
+  height: auto;
+  line-height: 1.05;
+  overflow: hidden;
+  padding: 0 16px;
+  border: solid black 4px;
+}
+
+.h2 {
+  border-bottom: solid 4px rgba(2,191,231,.85);
+  padding-top: 1em;
+}
+
+.tokenId {
+  font-size: 22px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  /*border-bottom: 1px solid var(--grey);*/
+  /*display: flex;*/
+  height: 1.5em;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: relative;
+}
+
+.shareButton {
+  color: grey;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.link {
+  visibility: hidden;
+}
+
+.tokenContainer:hover .link {
+  visibility: initial;
+}
+
+.signatureIcon {
+  color: var(--violet);
+}
+
+.imgToken {
+  height: 300px;
+  width: 300px;
+  clip-path: rect(100px, 100px, 100px, 100px);
+}

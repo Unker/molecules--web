@@ -1,0 +1,50 @@
+
+
+.p + .p {
+  margin-top: 24px;
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 16px;
+  text-shadow: 1px 1px 2px gray, 0 0 1em white, 0 0 0.2em white;
+}
+
+.h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 8px;
+  font-weight: bold;
+
+}
+
+.pt {
+  padding-top: 20px;
+}
+
+.table {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+  /*text-shadow: 2px 2px 4px white, 0 0 4px white, 0 0 2.4em gray;*/
+}
+
+.trmleft {
+  text-align:left;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+  width: 250px;
+  /*min-width:500px;*/
+}
+
+.trmright {
+  text-align:left;
+  padding: 10px 10px 10px 10px;
+  border:  1px solid black;
+  /*max-width:300px;*/
+  /*vertical-align: middle;*/
+}
+

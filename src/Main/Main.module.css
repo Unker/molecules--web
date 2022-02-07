@@ -1,0 +1,76 @@
+.card {
+  margin: 0 auto;
+  width: var(--content-width);
+}
+
+.card + .card {
+  margin-top: 32px;
+}
+
+.p + .p {
+  margin-top: 24px;
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 16px;
+  text-shadow: 1px 1px 2px gray, 0 0 1em white, 0 0 0.2em white;
+}
+
+.h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 8px;
+}
+
+.pt {
+  padding-top: 20px;
+}
+
+.table {
+  width: 100%;
+  font-weight: bold;
+  /*text-shadow: 2px 2px 4px white, 0 0 4px white, 0 0 2.4em gray;*/
+}
+
+.tleft {
+  text-align:left;
+  width: 50%;
+  min-width:500px;
+  height:235px;
+}
+
+.tright {
+  text-align:right;
+  max-width:300px;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+.bg {
+    margin: 20px auto;
+    justify-content: center;
+    background-image: url('../res/img/property.png');
+    background-repeat: no-repeat;
+    min-height:235px;
+    /*background-size:cover;*/
+}
+
+.bgPrice {
+    margin: 20px auto;
+    justify-content: center;
+    background-size:cover;
+    background-image: url('../res/img/19366_price.jpg');
+    background-repeat: no-repeat;
+}
+
+.bgAbout {
+    margin: 20px auto;
+    justify-content: center;
+    background-size:cover;
+    background-image: url('../res/img/19366_about.jpg');
+    background-repeat: no-repeat;
+}

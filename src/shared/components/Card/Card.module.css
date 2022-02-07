@@ -1,0 +1,16 @@
+.card {
+  background-color: var(--baby-powder);
+  border-radius: 50px;
+  /*box-shadow: 4px 5px var(--mandarin);*/
+  padding: 2em 3em;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 5px var(--violet);
+}
+
+@media only screen and (max-width: 720px) {
+  .card {
+    padding: 1em;
+  }
+}
+
