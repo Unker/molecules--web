@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const webpack =require('webpack');
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: ['react-hot-loader/patch', './src/index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist', 'build'),
@@ -14,12 +14,15 @@ module.exports = {
     contentBase: './dist',
     publicPath: '/build/',
     historyApiFallback: true,
+    open: true,
   },
   plugins: [],
   plugins:[
     new MiniCssExtractPlugin(), 
     new Dotenv({ systemvars: true }),
-    // new HtmlWebpackPlugin({template:'./src/index.html'})
+    // new HtmlWebpackPlugin(
+    //   {template:'./dist/index.html'}
+    // )
   ],
   module: {
     rules: [

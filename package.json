@@ -66,6 +66,7 @@
   },
   "devDependencies": {
     "dotenv-webpack": "^7.0.2",
+    "html-webpack-plugin": "^4.5.2",
     "webpack-dev-server": "^3.11.2"
   },
   "resolutions": {
