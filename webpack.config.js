@@ -16,7 +16,6 @@ module.exports = {
     historyApiFallback: true,
     open: true,
   },
-  plugins: [],
   plugins:[
     new MiniCssExtractPlugin(), 
     new Dotenv({ systemvars: true }),
@@ -61,7 +60,10 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { modules: false } },
+          { 
+            loader: 'css-loader', 
+            options: { modules: false } 
+          },
         ],
         exclude: /\.module\.css$/,
       },
