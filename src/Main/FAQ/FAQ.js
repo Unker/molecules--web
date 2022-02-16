@@ -104,11 +104,11 @@ const Title = () => {
 
             <Accordion.Item key={id} eventKey={id} > 
               <Accordion.Header 
-                className={s.h3}
+                className={s.hd}
                 data-for={id}
                 data-delay-hide='100'
               >
-                <h3 className={cn(s.h3, s.pt)}> {fq[key]["qst"]} </h3>
+                <h3 className={cn(s.hd, s.pt)}> {fq[key]["qst"]} </h3>
               </Accordion.Header>
               <Accordion.Body className={s.p}>
                 {fq[key]["text"]}

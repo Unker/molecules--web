@@ -1,6 +1,6 @@
 .card {
   background-color: var(--baby-powder);
-  border-radius: 50px;
+  border-radius: 3vw;
   /*box-shadow: 4px 5px var(--mandarin);*/
   padding: 2em 3em;
   position: relative;

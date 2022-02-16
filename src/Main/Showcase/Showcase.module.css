@@ -1,7 +1,7 @@
 .showcaseContainer {
-  margin: 32px auto;
+  margin: 32px 4vw;
   width: var(--content-width);
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 3vw;
 
 }
 .showcase {
@@ -12,7 +12,7 @@
 }
 
 .h2 {
-  font-size: 24px;
+  font-size: calc(1em + 1vw);
   font-weight: 700;
   line-height: 1em;
   padding-bottom: 16px;

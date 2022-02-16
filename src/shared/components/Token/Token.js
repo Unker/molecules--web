@@ -63,8 +63,8 @@ async function getSrcImage(token) {
 const Token = ({ token, name, id, showId = true }) => {
 
   let Info = {
-    width: 500,
-    height: 400,
+    width: '350',
+    height: '350',
     debug: false,
     j2sPath: "/jmol/jsmol/jsmol/j2s",
     // color: "0xC0C0C0", // "0xfcfef6",

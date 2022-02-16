@@ -1,5 +1,5 @@
 .card {
-  margin: 32px auto;
+  margin: 32px 4vw;
   width: var(--content-width);
 }
 
@@ -11,7 +11,7 @@
 }
 
 .h2 {
-  font-size: 24px;
+  font-size: calc(1em + 1vw);
   font-weight: 700;
   line-height: 1em;
   overflow: hidden;

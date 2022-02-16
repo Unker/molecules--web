@@ -5,7 +5,7 @@
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue","Source Sans Pro",sans-serif;
   line-height: 1.15;
   font-weight: bold;
-  font-size: 6em;
+  font-size: calc(3em + 4vw);
   justify-content: center;
   margin: 40px auto;
   position: relative;
@@ -13,11 +13,12 @@
   text-shadow: 4px 6px var(--bs-body-font-size), 0 0 10px white;
   width: var(--content-width);
   white-space: pre-wrap;
+  text-align: center;
 }
 
 @media (max-width: 1280px) {
   .title {
-    font-size: 7em;
+    font-size: calc(3em + 4vw);
     line-height: 1em;
   }
 }
@@ -25,7 +26,7 @@
 .h2 {
   color: gold;
   display: flex;
-  font-size: 3em;
+  font-size: calc(0.5em + 4vw);
   justify-content: center;
   font-weight: 700;
   line-height: 1em;
@@ -33,6 +34,7 @@
   position: relative;
   text-decoration: none;
   text-shadow: 2px 3px var(--bs-gray-dark), 0 0 0.2em black;
+  text-align: center;
 }
 
 .bg {

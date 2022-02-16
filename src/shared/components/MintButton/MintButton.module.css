@@ -2,9 +2,9 @@
   display: block;
   font-size: 24px;
   border-radius: 20px;
-  margin: 48px auto;
+  margin: 48px 10vw;
   height: 64px;
-  width: var(--content-width);
+  width: 80vw;
   color: var(--violet);
 }
 

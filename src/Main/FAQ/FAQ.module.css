@@ -7,10 +7,18 @@
   padding-bottom: 8px;
 }
 
+.hd {
+  font-size: calc(0.5em + 1vw);
+  font-weight: 700;
+  line-height: 1em;
+  /*padding-bottom: 8px;*/
+}
+
 .pt {
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 .p {
   line-height: 24px;  
+  font-size: calc(1em + 1vw);
 }

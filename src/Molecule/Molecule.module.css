@@ -4,12 +4,12 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 32px auto;
+  margin: 32px 4vw;
   width: var(--content-width);
 }
 
 .h2 {
-  font-size: 1.5em;
+  font-size: calc(1em + 1vw);
   font-weight: bold;
   line-height: 1em;
 }

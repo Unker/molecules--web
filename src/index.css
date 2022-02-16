@@ -10,7 +10,7 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: calc(0.7em + 0.5vw);
   font-family: 'Fira Mono', monospace;
 }
 
@@ -20,7 +20,7 @@ p {
 
 @media (max-width: 1280px) {
   body {
-    font-size: 14px;
+    font-size: calc(0.7em + 0.5vw);
     line-height: 1.3em;
   }
 }

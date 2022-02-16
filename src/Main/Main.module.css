@@ -1,5 +1,5 @@
 .card {
-  margin: 0 auto;
+  margin: 0 4vw;
   width: var(--content-width);
 }
 
@@ -12,7 +12,7 @@
 }
 
 .h2 {
-  font-size: 24px;
+  font-size: calc(1em + 1vw);
   font-weight: 700;
   line-height: 1em;
   padding-bottom: 16px;
@@ -51,7 +51,7 @@
 }
 
 .bg {
-    margin: 20px auto;
+    margin: 20px 4vw;
     justify-content: center;
     background-image: url('../res/img/property.png');
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 }
 
 .bgPrice {
-    margin: 20px auto;
+    margin: 20px 4vw;
     justify-content: center;
     background-size:cover;
     background-image: url('../res/img/19366_price.jpg');
@@ -68,7 +68,7 @@
 }
 
 .bgAbout {
-    margin: 20px auto;
+    margin: 20px 4vw;
     justify-content: center;
     background-size:cover;
     background-image: url('../res/img/19366_about.jpg');
