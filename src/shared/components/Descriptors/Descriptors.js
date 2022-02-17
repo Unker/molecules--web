@@ -60,7 +60,7 @@ const BtnAbout = (props) => (
 
   <OverlayTrigger 
     trigger="focus" 
-    placement="right" 
+    placement="bottom" 
     overlay={popover(props.headText,props.bodyText)}
   >
     <Button variant="light">?</Button>
@@ -101,13 +101,12 @@ const Descriptors = ({values}) => {
 
 
   return (
-    <div className={s.tokenContainer}>
-      
-      <center>  
-      <h1>Descriptors</h1>
-      </center>
 
-      <Accordion>
+    <div className={s.tokenContainer}>
+
+      <h2 className={s.h2}>Descriptors</h2>
+
+      <Accordion className={s.head}>
         {Object.keys(descriptors).map((key,id) => {
             return (
 

@@ -23,8 +23,6 @@ const Intro = () => {
   const { nfts } = useContracts()
 
 
-
-
   return (
     <>
 
@@ -42,16 +40,30 @@ const Intro = () => {
           <td className={cn(s.tleft, s.bg)}>
             
           </td>
-          <td className={s.tright}>
+          {/*<td className={s.tright}>
             <br/>
             It is your molecule that could save millions of lives...
             <br /> 
             ...or happen to be kind of a new Highly Hazardous Chemical!
             <br/><br/><br/><br/>The future is already here
-          </td>
+          </td>*/}
+
         </tr>
         </tbody>
         </table>
+
+        <div className={s.flex}>
+          <p className={s.left}>
+            It is your molecule that could save millions of lives...
+            <br /> 
+            ...or happen to be kind of a new Highly Hazardous Chemical!
+          </p>
+          <p className={s.right}>
+            <br /> 
+            The future is already here
+          </p>
+        </div>
+
       </Card>
 
       <MintedTokens />

@@ -141,20 +141,26 @@ const Token = ({ token, name, id, showId = true }) => {
         </>
       ) : null}
 
+      <h2 className={cn(s.h2)}
+        data-tip="Simplified Molecular Input Line Entry System"
+      >
+        SMILES
+      </h2>
       <pre className={s.token}
         data-tip="Simplified Molecular Input Line Entry System"
       >
-        SMILES: {token}
+        {token}
       </pre>
+
       <ReactTooltip />
 
-      
+      <h2 className={s.h2}>2D Conformer</h2>
       <img className={s.imgToken} src={imageToken} alt="" /> 
-      <br/>
+      {/*<br/>
       <a  href={`https://chemapps.stolaf.edu/jmol/jmol.php?model=${token}&image2d`}>2D model</a>
       <br/>
       <a  href={`https://chemapps.stolaf.edu/jmol/jmol.php?model=${token}`}>3D model</a>
-      <br/>
+      <br/>*/}
       <h2 className={s.h2}>3D Conformer</h2>
       <div dangerouslySetInnerHTML={{ __html: jmol }} /> 
       <div dangerouslySetInnerHTML={{ __html: jmolWdgts }} /> 

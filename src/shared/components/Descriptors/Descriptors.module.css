@@ -7,13 +7,13 @@
 
 
 .popover {
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   left: 0;
   z-index: 1010;
   display: none;
-  min-width: 500px;
-  max-width: 600px;
+  min-width: 90%;
+  margin-left: 1vw;
   padding: 1px;
   text-align: left;
   white-space: normal;
@@ -29,4 +29,14 @@
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
+}
+
+.h2 {
+  border-bottom: solid 4px rgba(2,191,231,.85);
+  padding-top: 1em;
+  font-size: calc(1em + 0.5vw);
+}
+
+.head {
+  padding: 0.5rem 1.25rem;
 }

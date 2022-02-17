@@ -20,7 +20,7 @@
 }
 
 .h3 {
-  font-size: 18px;
+  font-size: calc(0.5em + 1vw);
   font-weight: 700;
   line-height: 1em;
   padding-bottom: 8px;
@@ -39,7 +39,7 @@
 .tleft {
   text-align:left;
   width: 50%;
-  min-width:500px;
+  /*min-width:500px;*/
   height:235px;
 }
 
@@ -57,6 +57,7 @@
     background-repeat: no-repeat;
     min-height:235px;
     /*background-size:cover;*/
+    background-position: center bottom;
 }
 
 .bgPrice {
@@ -73,4 +74,21 @@
     background-size:cover;
     background-image: url('../res/img/19366_about.jpg');
     background-repeat: no-repeat;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.left {
+  text-align:left;
+  margin: 0 10px 0 0;
+}
+
+.right {
+  text-align:right;
+  vertical-align: middle;
 }
