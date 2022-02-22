@@ -12,7 +12,7 @@
 }
 
 .h2 {
-  font-size: calc(1em + 1vw);
+  font-size: min(calc(1em + 1vw),22px);
   font-weight: 700;
   line-height: 1em;
   padding-bottom: 16px;

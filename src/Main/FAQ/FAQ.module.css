@@ -20,5 +20,5 @@
 
 .p {
   line-height: 24px;  
-  font-size: calc(0.5em + 1vw);
+  font-size: calc(0.7em + 0.3vw);
 }

@@ -51,7 +51,7 @@ const MyMolecules = () => {
             ? nfts.map(({ molecule, id, name }) => (
                 <Token token={molecule} id={id} key={id} name={name} />
               ))
-            : "You don't have any molecules yet :("}
+            : "You don't have any molecules yet ..."}
         </div>
       </Card>
     </>

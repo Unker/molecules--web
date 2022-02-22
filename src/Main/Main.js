@@ -28,9 +28,9 @@ const Intro = () => {
 
       <Card className={s.card}>
         <h2 className={s.h2}>          
-          We propose the drug-likeness molecules produced by AI 
+          We propose the drug-likeness molecules produced by artificial intelligence (AI) 
           using the Generative adversarial network (GAN). 
-          Each molecule will be registered on an ERC721 compatible smart contract on the Binance blockchain, 
+          Each molecule will be registered on an ERC721 compatible smart contract on the Binance Smart Chain, 
           or in other words will be an non-fungible token (NFT).
         </h2>
 
@@ -95,7 +95,7 @@ const Intro = () => {
         <h2 className={s.h2}>Pricing</h2>
         <p className={s.p}>
           There will be 4096 Molecules minted. They are priced on the following
-          curve:
+          stages:
           <br />
           <br />
           >   1 -  511: 0.25 BNB
@@ -114,9 +114,7 @@ const Intro = () => {
 
       <Card className={s.card} id="faq">
         <h2 className={s.h2}>FAQ</h2>
-
         <FAQ />
-
       </Card>
 
       <Card className={s.card} id="specs">
@@ -125,26 +123,26 @@ const Intro = () => {
         <p className={s.p}>
           When a user mints a token the generative algorithm randomly
           produces a drug-likness Molecule and emits an event that
-          contains it. You can see an example{' '}
+          contains it.{/* You can see an example{' '}
           <a href={process.env.GENERATED_EVENT_URL} target="_blank">
             here
           </a>
-          .{' '}
+          .{' '} */}
         </p>
         <p className={s.p}>
           After a Molecule has been minted, at any time someone can query the smart
           contract on-chain and call "getSmiles" with the given tokenID. Calling 
           will return the Simplified Molecular Input Line Entry System (SMILES), 
           it doesn't cost gas to call. Thus anyone can view the Molecule
-          on chain at any time, for free. Molecule value is linked to the Binance blockchain. 
-          So long as the Binance blockchain survives, so too will the Molecules.
+          on chain at any time, for free. Molecule value is linked to the Binance Smart Chain. 
+          So long as the Binance Smart Chain survives, so too will the Molecules.
         </p>
         <p className={s.p}>
           As a sort of "fallback" mechanism, and to ensure that the NFT Molecules
           are easily viewable on all other NFT platforms, we also expose a
           standard ERC721-Metadata compliant `tokenURI` function. This tokenURI
           function returns a URL to our server, which responds with metadata
-          about the Molecule (including an SVG image representing the Molecule).
+          about the Molecule (including an 3D confirmer representing the Molecule).
           However, this function is not necessary to view the Molecule on-chain.
         </p>
         <p className={s.p}>
@@ -155,7 +153,6 @@ const Intro = () => {
 
       <Card className={s.card} id="roadmap">
         <h2 className={s.h2}>And what will happen next?</h2>
-
         <RoadMap />
       </Card>
 

@@ -65,7 +65,7 @@ const Title = () => {
         <tr>
           <td className={s.trmleft} rowSpan="2">
             <h3 className={s.h3}>
-              After sales 3500+ molecules we are going to start 
+              After sales 3071 molecules we are going to start 
               produce Enzymes with our new GAN
             </h3>
           </td>
@@ -92,9 +92,7 @@ const Title = () => {
                 human experts today.
               </p>
               <img src={enzPic}  />
-              <div>
-              <img src={require('/src/res/img/enz.png')} /> 
-              </div>
+
           </td>
         </tr>
         </tbody>
