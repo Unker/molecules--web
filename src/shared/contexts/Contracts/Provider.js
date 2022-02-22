@@ -22,6 +22,8 @@ const Provider = ({ children }) => {
   const [contract, setContract] = useState(
     new Contract(addresses.contract, abis.molecules)
   )
+  
+  console.log("contract=",addresses.contract.toString(16))
 
   const { wallet, walletAddress } = useWeb3()
 
@@ -73,8 +75,6 @@ const Provider = ({ children }) => {
   useEffect(() => {
     if (!!wallet && !contract.signer) {
       setContract(contract.connect(wallet))
-      // setNames(names.connect(wallet))
-      // setNames("")
     }
   }, [wallet, setContract, contract])
 

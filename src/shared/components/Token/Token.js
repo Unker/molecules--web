@@ -94,7 +94,7 @@ const Token = ({ token, name, id, showId = true }) => {
   const [jmol, setJmol] = useState([])
   const [jmolWdgts, setJmolWdgts] = useState([])
   useEffect(() => {
-    console.log("create jmol id", id);
+    console.log("creating jmol id", id);
     setJmol(Jmol.getAppletHtml(`jmolApplet${id}`,Info));
     // setJmolWdgts(Jmol.jmolCheckbox(`jmolApplet${id}`,'spin on','spin off','spin on/off'));
   }, [])
