@@ -9,11 +9,11 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist', 'build'),
-    publicPath: '/'
+    // publicPath: '/'
   },
   devServer: {
     contentBase: './dist',
-    // publicPath: '/build/',
+    publicPath: '/build/',
     historyApiFallback: true,
     open: true,
   },
