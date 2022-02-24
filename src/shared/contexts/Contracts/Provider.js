@@ -40,7 +40,7 @@ const Provider = ({ children }) => {
               const noty = new Noty({
                 layout: 'bottom',
                 buttons: [
-                  Noty.button('Etherscan', cn(s.button, s.small), () =>
+                  Noty.button('bscscan', cn(s.button, s.small), () =>
                     window.open(
                       `${
                         process.env.ETHERSCAN_BASE || 'https://bscscan.com'

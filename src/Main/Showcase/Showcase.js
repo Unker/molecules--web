@@ -37,7 +37,7 @@ const Showcase = () => {
         {connected && nfts.length > 0 ? (
           <MoleculeList nfts={nfts} />
         ) : (
-          "You don't have any molecules yet :("
+          "You don't have any molecules yet ..."
         )}
       </div>
     </Card>

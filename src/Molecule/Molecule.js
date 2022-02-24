@@ -213,7 +213,7 @@ const Molecule = () => {
                   {"Name your molecule"}
                 </h2>
                 <div className={s.processingCopy}>
-                  {'Name cannot be longer than 25 characters and should contain only "a-z,A-Z,0-9,\'-\'" characters and spaces'}
+                  {'Name cannot be longer than 50 characters and should contain only "a-z,A-Z,0-9,\'-\'" characters and spaces'}
                 </div>
                 <div className={s.inputWrapper}>
                   <input

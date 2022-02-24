@@ -75,7 +75,7 @@ const Title = () => {
       },
     "faq7": {
       "qst":"How can I buy a Molecule?",
-      "text":parse(`To buy a Molecule, you need to have an Ethereum wallet setup. A
+      "text":parse(`To buy a Molecule, you need to have an Binance Chain Wallet setup. A
           commonly recommended one is
           <a href="https://metamask.io/" target="_blank">
             Metamask

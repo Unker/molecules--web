@@ -60,16 +60,16 @@ const Navigation = () => {
         className={s.button}
         onClick={() => window.open(etherscanURL, '_blank')}
       >
-        Etherscan
+        bscscan
       </Button>
-      <Button
+      {/*<Button
         className={s.button}
         onClick={() =>
           window.open(`${process.env.OPENSEA_URL}`, '_blank')
         }
       >
         OpenSea
-      </Button>
+      </Button>*/}
       <ConnectButton />
     </nav>
   )

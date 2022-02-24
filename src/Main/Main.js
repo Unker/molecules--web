@@ -53,15 +53,15 @@ const Intro = () => {
         </table>
 
         <div className={s.flex}>
-          <p className={s.left}>
+          <div className={s.left}>
             It is your molecule that could save millions of lives...
             <br /> 
             ...or happen to be kind of a new Highly Hazardous Chemical!
-          </p>
-          <p className={s.right}>
+          </div>
+          <div className={s.right}>
             <br /> 
             The future is already here
-          </p>
+          </div>
         </div>
 
       </Card>

@@ -176,7 +176,7 @@ const MintButton = () => {
             className={s.submit}
             onClick={async () => {
               let smiles = await getSmiles(seed)
-              console.log("truing mint",smiles)
+              console.log("trying mint",smiles)
               await createMolecule(smiles)
               setModalOpen(false)
               setSeed(Math.floor(Math.random() * 1000000000000))
