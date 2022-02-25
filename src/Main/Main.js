@@ -86,8 +86,8 @@ const Intro = () => {
           At the same time, human participation does not only complement, but also severely 
           restricts this process. There are not very many gifted and experienced leading chemists 
           in the world, so the process of developing new molecules cannot go beyond a few laboratories. 
-          Our generative model of molecular structures helps to overcome these limitations and is able 
-          to discover new chemical directions missed by chemists.
+          Our generative model of molecular structures helps to overcome these limitations and <b>is able 
+          to discover new chemical directions</b> missed by chemists.
         </p>
       </Card>
 
@@ -123,11 +123,11 @@ const Intro = () => {
         <p className={s.p}>
           When a user mints a token the generative algorithm randomly
           produces a drug-likness Molecule and emits an event that
-          contains it.{/* You can see an example{' '}
+          contains it. You can see an example{' '}
           <a href={process.env.GENERATED_EVENT_URL} target="_blank">
             here
           </a>
-          .{' '} */}
+          .{' '} 
         </p>
         <p className={s.p}>
           After a Molecule has been minted, at any time someone can query the smart

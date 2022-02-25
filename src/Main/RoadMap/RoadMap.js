@@ -11,7 +11,8 @@ import enzPic from '/src/res/img/enz.png'
 
 const Title = () => {
 
-  //console.log("enzPic",enzPic)
+
+  console.log("enzPic",enzPic)
 	return (
 		<>
 		  <table className={s.table}>
@@ -91,7 +92,7 @@ const Title = () => {
                 models can allow for richer protein design, enabling directions beyond the capability of 
                 human experts today.
               </p>
-              <img src={enzPic}  />
+              <img src={`/build/`+enzPic}  />
 
           </td>
         </tr>
