@@ -40,7 +40,7 @@ const MintedTokens = () => {
         <h2 className={s.h2}>Example</h2>
       </div>
       <div className={s.container}>
-        <Token token={"CC(C)CC1CCCN(CC2CCCCNC(=O)C2)CCCC[C@@H]1C"} name={"name"} id={"0"} showId={false}/>
+        <Token token={"CC(=CN1CCC2(CCC2CC2CC2)CC1=O)C(C)(C)C"} name={"name"} id={"0"} showId={false}/>
       </div>
     </Card>
     // null
