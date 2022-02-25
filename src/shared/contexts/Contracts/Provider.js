@@ -44,7 +44,7 @@ const Provider = ({ children }) => {
                     window.open(
                       `${
                         process.env.ETHERSCAN_BASE || 'https://bscscan.com'
-                      }/tx/${transactionHash}`,
+                      }`+`/tx/${transactionHash}`,
                       '_blank'
                     )
                   ),
@@ -59,7 +59,7 @@ const Provider = ({ children }) => {
             }),
             */
                 ],
-                text: `Molecule #${tokenId} minted — your molecule is ready!
+                text: `Molecule #`+`${tokenId}`+` minted
           <div style="padding: 16px 0; display: flex; font-family: 'Unimono', monospace; justify-content: center;"><pre style="display: inline-block;">${token}</pre></div>`,
                 timeout: 4000,
               }).show()
@@ -253,7 +253,7 @@ const Provider = ({ children }) => {
 
   useInterval(async () => {
     fetchTokens()
-  }, 500000) // todo 5000
+  }, 50000) // todo 5000
 
   useEffect(() => {
     fetchTokens()
