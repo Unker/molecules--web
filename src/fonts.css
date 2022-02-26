@@ -8,4 +8,9 @@
   src: url('./fonts/unifont.ttf');
 }
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('https://fonts.gstatic.com/s/nunito/v22/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');

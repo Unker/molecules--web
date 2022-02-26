@@ -112,3 +112,22 @@
   vertical-align: middle;
   margin: 20px;
 }
+
+.grok {
+  color: #566c90 !important;
+  outline: none;
+  font-size: 24px;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  padding-left: 48px;
+  background-image: url(https://datagrok.ai/img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-y: center;
+  font-weight: bold;
+/*  height: 70px;
+  display: flex;
+  align-items: center;*/
+  margin-left: 0.5rem;
+  margin-right: 0;
+}

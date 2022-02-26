@@ -174,8 +174,8 @@ const Intro = () => {
           <a href="http://www.rdkit.org/">
             <img className={s.img} src="http://www.rdkit.org/Images/logo.png"/>
           </a>
-          <a href="https://datagrok.ai/">
-            <img className={s.img} src="https://datagrok.ai/favicon/favicon.ico"/>
+          <a className={s.grok} href="https://datagrok.ai/">
+            datagrok
           </a>
 
         </p>
