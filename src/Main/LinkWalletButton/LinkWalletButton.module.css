@@ -1,6 +1,6 @@
 .linkWallet {
   display: block !important;
-  font-size: 24px;
+  font-size: calc(0.5em + 1vw);
   margin: 48px auto !important;
   width: var(--content-width);
   background-color: var(--green);

@@ -14,9 +14,8 @@ import parse from 'html-react-parser';
 import { Helmet } from 'react-helmet'
 import FAQ from './FAQ'
 import RoadMap from './RoadMap'
-// import { Text, StyleSheet } from "react-native";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react'
-
 
 const Intro = () => {
   const { connected } = useWeb3()
@@ -68,7 +67,6 @@ const Intro = () => {
 
       <MintedTokens />
       <MintButton />
-
 
 
       <Card className={cn(s.card, s.bgAbout)} id="about">
@@ -161,10 +159,31 @@ const Intro = () => {
       <Card className={s.card}>
         <h2 className={s.h2}>Powered by</h2>
         <p className={s.p}>
+          <a href="https://asciipunks.com/">
+            <img className={s.img} src="https://asciipunks.com/ascii-punks-social.png" alt="ASCIIPunks"/>
+          </a>
+          <a href="https://pubchem.ncbi.nlm.nih.gov/">
+            <img className={s.img} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/PubChem_logo.svg/128px-PubChem_logo.svg.png" alt="PubChem"/>
+          </a>
+          <a href="https://www.dappuniversity.com/">
+            <img className={s.img} src="https://www.dappuniversity.com/assets/logo_navbar-fe98a842d56267277b9fc8c4a8b079ae930b1f1c4d71f33792dcc0ad25ff00a0.png"/>
+          </a>
+          <a href="https://deepchem.io/">
+            <img className={s.img} src="https://deepchem.io/assets/img/deepchem_logo.png"/>
+          </a>
+          <a href="http://www.rdkit.org/">
+            <img className={s.img} src="http://www.rdkit.org/Images/logo.png"/>
+          </a>
+          <a href="https://datagrok.ai/">
+            <img className={s.img} src="https://datagrok.ai/favicon/favicon.ico"/>
+          </a>
 
         </p>
-
       </Card>
+
+      <div className={s.mailDiv} >
+        <a className={s.mailText}>info@nft-h2o.com</a>
+      </div>
 
     </>
   )

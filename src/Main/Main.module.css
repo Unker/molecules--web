@@ -92,3 +92,23 @@
   text-align:right;
   vertical-align: middle;
 }
+
+.mailDiv {
+  text-align:center;
+  padding-top: 20px;
+  font-size: 14px;
+  font-family: var(--bs-body-font-family);
+}
+
+.mailText{
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+
+.img {
+  max-width: 128px;
+  vertical-align: middle;
+  margin: 20px;
+}
