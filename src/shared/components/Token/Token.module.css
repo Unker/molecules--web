@@ -22,6 +22,8 @@
   padding: 5px 16px;
   /*border: solid black 4px;*/
   font-size: calc(0.6em + 0.5vw);
+  justify-content: space-between;
+  display: flex;
 }
 
 .h2 {
@@ -65,4 +67,11 @@
   height: 300px;
   width: 300px;
   clip-path: rect(100px, 100px, 100px, 100px);
+}
+
+.saveButton {
+  border: 1px solid var(--superiority);
+  margin-bottom: 8px;
+  margin-right: 5px;
+  box-shadow: 4px 4px 8px;
 }

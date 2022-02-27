@@ -1,13 +1,16 @@
 import React from 'react'
+import Modal from 'react-modal'
 import cn from 'classnames'
 import { Link } from 'react-router-dom'
 import s from './Token.module.css'
 import ReactTooltip from 'react-tooltip'
-
+import Button from '@components/Button'
+import useContracts from '@hooks/useContracts'
 import Descriptors from '@components/Descriptors'
 import fetch from 'node-fetch'
-// import axios from 'axios';
+import { useWeb3 } from 'eth-react'
 
+import { utils } from 'web3'
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
 
@@ -59,8 +62,66 @@ async function getSrcImage(token) {
   return response.url
 }
 
+const customStyles = {
+  content: {
+    backgroundColor: 'var(--baby-powder)',
+    bottom: 'auto',
+    boxShadow: '4px 5px var(--mandarin)',
+    left: '50%',
+    marginRight: '-50%',
+    padding: '32px',
+    right: 'auto',
+    top: '50%',
+    transform: 'translate(-50%, -100%)',
+    borderRadius: '10px',
+  },
+}
+
 
 const Token = ({ token, name, id, showId = true }) => {
+
+  const { walletAddress } = useWeb3()
+  const { smilesMolecule, ownerOf, fetchNameById, setName, setPrice, clearPrice, getTokenPrice, buyToken } = useContracts()
+  const [smiles, setSmiles] = useState()
+  const [owner, setOwner] = useState()
+  const [moleculeName, setMoleculeName] = useState('')
+  const [moleculePrice, setMoleculePrice] = useState('')
+  const [buyPrice, setBuyPrice] = useState('')
+  const [processingRequest, setProcessingRequest] = useState(false)
+  const [editingName, setEditingName] = useState(false)
+  const [settingPrice, setSettingPrice] = useState(false)
+  const [clearingPrice, setClearingPrice] = useState(false)
+  const [buyingToken, setBuyingToken] = useState(false)
+
+  const iAmContractOwner = walletAddress === process.env.OWNER_CONTRACT
+
+  useEffect(async () => {
+    if (!fetchNameById) return
+    fetchNameById(id)
+    .then((name) => setMoleculeName(name))
+    .catch(() => setMoleculeName(""))
+  }, [setMoleculeName, fetchNameById])
+
+  useEffect(async () => {
+    if (!getTokenPrice) return
+    getTokenPrice(id)
+    .then((price) => setBuyPrice(price))
+    .catch(() => setBuyPrice("0"))
+  }, [setBuyPrice, getTokenPrice])
+
+  useEffect(async () => {
+    if (!smilesMolecule) return
+    smilesMolecule(id)
+    .then((smiles) => setSmiles(smiles))
+    .catch(() => setSmiles(""))
+  }, [smilesMolecule])
+
+  useEffect(async () => {
+    if (!ownerOf) return
+    ownerOf(id)
+    .then((owner) => setOwner(owner))
+    .catch(() => setOwner(""))
+  }, [ownerOf])
 
   let Info = {
     width: '350',
@@ -154,13 +215,33 @@ const Token = ({ token, name, id, showId = true }) => {
 
       <ReactTooltip />
 
+      <h2 className={cn(s.h2)}>
+        Name
+      </h2>
+      <pre className={s.token}>
+        {name ? (
+          <>{name}</>
+        ) : <>-</>}
+        {owner == walletAddress ? (
+          <>
+            <Button
+              className={s.saveButton}
+              onClick={() => {
+                setEditingName(true)
+              }}
+            >
+              Edit name!
+            </Button>
+          </>
+        ) : null
+        }
+      </pre>
+
+      <ReactTooltip />
+
+
       <h2 className={s.h2}>2D Conformer</h2>
       <img className={s.imgToken} src={imageToken} alt="" /> 
-      {/*<br/>
-      <a  href={`https://chemapps.stolaf.edu/jmol/jmol.php?model=${token}&image2d`}>2D model</a>
-      <br/>
-      <a  href={`https://chemapps.stolaf.edu/jmol/jmol.php?model=${token}`}>3D model</a>
-      <br/>*/}
       <h2 className={s.h2}>3D Conformer</h2>
       <div dangerouslySetInnerHTML={{ __html: jmol }} /> 
       <div dangerouslySetInnerHTML={{ __html: jmolWdgts }} /> 
@@ -170,6 +251,243 @@ const Token = ({ token, name, id, showId = true }) => {
 
 
       <Descriptors values={getValues(token)}/>
+
+
+      <h2 className={cn(s.h2)}>
+        Price
+      </h2>
+      <pre className={s.token}>
+        {buyPrice>0?(
+         <>{utils.fromWei(buyPrice, "ether")} BNB</>
+        ) : <>not set</>}
+
+        {owner == walletAddress ? (
+          <>
+            <Button
+              className={s.saveButton}
+              onClick={() => {
+                setSettingPrice(true)
+              }}
+            >
+              Set price
+            </Button>
+
+            {buyPrice>0?(
+              <Button
+                className={s.saveButton}
+                onClick={() => {
+                  setClearingPrice(true)
+                }}
+              >
+                Clear price
+              </Button>
+              ):null
+            }
+          </>
+        ) : (
+          <>
+          {buyPrice>0 ? (
+            <Button
+              className={s.saveButton}
+              onClick={() => {
+                setBuyingToken(true)
+              }}
+            >
+              Buy molecule
+            </Button>
+          ) : null
+          }
+          </>
+        )
+        }
+      </pre>
+
+
+      <Modal
+        isOpen={editingName}
+        style={customStyles}
+        onRequestClose={() => setEditingName(false)}
+      >
+        {processingRequest ? (
+          <div>
+            <div className={s.processingCopy}>
+              We are currently processing your request, check your metamask
+              for whenever the transaction will complete.
+            </div>
+            <Button
+              className={s.okay}
+              onClick={() => {
+                setEditingName(false)
+                setProcessingRequest(false)
+              }}
+            >
+              Okay
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <h2 className={cn(s.h2, s.modalTitle)}>
+              {"Name your molecule"}
+            </h2>
+            <div className={s.processingCopy}>
+              {'Name cannot be longer than 50 characters and should contain only "a-z,A-Z,0-9,\'-\'" characters and spaces'}
+            </div>
+            <div className={s.inputWrapper}>
+              <input
+                className={s.editMolecule}
+                value={moleculeName}
+                onChange={(e) => setMoleculeName(e.target.value)}
+              />
+              <Button
+                className={s.saveButton}
+                onClick={async () => {
+                  setProcessingRequest(true)
+                  await setName(id, moleculeName)
+                }}
+              >
+                Save
+              </Button>
+            </div>
+          </div>
+        )}
+      </Modal>
+      
+      <Modal
+        isOpen={settingPrice}
+        style={customStyles}
+        onRequestClose={() => setSettingPrice(false)}
+      >
+        {processingRequest ? (
+          <div>
+            <div className={s.processingCopy}>
+              We are currently processing your request, check your metamask
+              for whenever the transaction will complete.
+            </div>
+            <Button
+              className={s.okay}
+              onClick={() => {
+                setSettingPrice(false)
+                setProcessingRequest(false)
+              }}
+            >
+              Okay
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <h2 className={cn(s.h2, s.modalTitle)}>
+              {"Request your price for the molecule, BNB"}
+            </h2>
+            <div className={s.inputWrapper}>
+              <input
+                className={s.editMolecule}
+                value={moleculePrice}
+                onChange={(e) => setMoleculePrice(e.target.value)}
+              />
+              <Button
+                className={s.saveButton}
+                onClick={async () => {
+                  setProcessingRequest(true)
+                  await setPrice(id, moleculePrice)
+                }}
+              >
+                Save
+              </Button>
+            </div>
+          </div>
+        )}
+      </Modal>
+
+      <Modal
+        isOpen={clearingPrice}
+        style={customStyles}
+        onRequestClose={() => setClearingPrice(false)}
+      >
+        {processingRequest ? (
+          <div>
+            <div className={s.processingCopy}>
+              We are currently processing your request, check your metamask
+              for whenever the transaction will complete.
+            </div>
+            <Button
+              className={s.okay}
+              onClick={() => {
+                setClearingPrice(false)
+                setProcessingRequest(false)
+              }}
+            >
+              Okay
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <h2 className={cn(s.h2, s.modalTitle)}>
+              {"Are you sure to abort selling this molecule?"}
+            </h2>
+            <div className={s.inputWrapper}>
+              <Button
+                className={s.saveButton}
+                onClick={async () => {
+                  setProcessingRequest(true)
+                  await clearPrice(id)
+                }}
+              >
+                Yes
+              </Button>
+              <Button
+                className={s.saveButton}
+                onClick={async () => {
+                  setClearingPrice(false)
+                  setProcessingRequest(false)
+                }}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        )}
+      </Modal>
+
+      <Modal
+        isOpen={buyingToken}
+        style={customStyles}
+        onRequestClose={() => setBuyingToken(false)}
+      >
+        {processingRequest ? (
+          <div>
+            <div className={s.processingCopy}>
+              We are currently processing your request, check your metamask
+              for whenever the transaction will complete.
+            </div>
+            <Button
+              className={s.okay}
+              onClick={() => {
+                setBuyingToken(false)
+                setProcessingRequest(false)
+              }}
+            >
+              Okay
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <h2 className={cn(s.h2, s.modalTitle)}>
+              You are going to buy this molecule at {utils.fromWei(buyPrice, "ether")} BNB
+            </h2>
+            <div className={s.inputWrapper}>
+              <Button
+                className={s.saveButton}
+                onClick={async () => {
+                  setProcessingRequest(true)
+                  await buyToken(id,buyPrice)
+                }}
+              >
+                Buy
+              </Button>
+            </div>
+          </div>
+        )}
+      </Modal>
 
     </div>
   )

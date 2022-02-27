@@ -12,7 +12,6 @@ import enzPic from '/src/res/img/enz.png'
 const Title = () => {
 
 
-  console.log("enzPic",enzPic)
 	return (
 		<>
 		  <table className={s.table}>
