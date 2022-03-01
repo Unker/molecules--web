@@ -182,7 +182,7 @@ const Intro = () => {
       </Card>
 
       <div className={s.mailDiv} >
-        <a className={s.mailText}>info@nft-h2o.com</a>
+        <a className={s.mailText}>help@nft-h2o.com</a>
       </div>
 
     </>

@@ -8,7 +8,7 @@
 }
 
 .hd {
-  font-size: calc(0.5em + 1vw);
+  font-size: min(20px,calc(0.5em + 1vw));
   font-weight: 700;
   line-height: 1em;
   /*padding-bottom: 8px;*/
@@ -20,5 +20,5 @@
 
 .p {
   line-height: 24px;  
-  font-size: calc(0.7em + 0.3vw);
+  font-size: min(16px,calc(0.7em + 0.3vw));
 }
