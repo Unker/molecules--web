@@ -21,8 +21,16 @@ import './fontawesome/css/all.css'
 
 import cn from 'classnames'
 
+// import Mol from '@abis/Molecules.json'
+
+// var Web3 = require('web3');
+// // const web3_bsc = new Web3('https://bsc-dataseed1.binance.org:443');
+// const web3_bsc = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+// console.log("web3_bsc=",web3_bsc)
+
 
 const App = () => {
+
 
   return (
     <Router>

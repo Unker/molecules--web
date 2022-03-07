@@ -12,20 +12,36 @@ import Context from './Context'
 import addresses from '../../addresses'
 
 import { utils } from 'web3'
+import Web3 from 'web3'
 
 const Provider = ({ children }) => {
   const [nfts, setNfts] = useState([])
   const [totalSupply, setTotalSupply] = useState(0)
   const [tokenLimit, setTokenLimit] = useState(0)
   const [saleStarted, setSaleStarted] = useState(null)
+  const [networkId, setNetworkId] = useState('')
   const [currentPrice, setCurrentPrice] = useState('')
   const [contract, setContract] = useState(
     new Contract(addresses.contract, abis.molecules)
   )
   
-  console.log("contract=",addresses.contract.toString(16))
+  // console.log("contract=",addresses.contract.toString(16))
+
+  let web3;
+  if (window.ethereum) {
+    window.web3 = new Web3(window.ethereum)
+    // console.log("is window.ethereum")
+    web3 = window.web3
+
+  } else {
+    console.log("is non window.ethereum")
+  }
 
   const { wallet, walletAddress } = useWeb3()
+
+  // if(wallet) console.log("wallet=",wallet)
+  // if(walletAddress) console.log("walletAddress=",walletAddress.toString(16))
+
 
   useEffect(() => {
     ;(async function () {
@@ -82,23 +98,32 @@ const Provider = ({ children }) => {
     async (userAddress) => {
       const address = userAddress || walletAddress
       if (!address || !contract.signer) return []
-      const userMolecules = []
+      let userMolecules = []
+      let namedMolecules = []
 
-      const balance = (await contract.balanceOf(address)).toNumber()
-      for (let index = 0; index < balance; index++) {
-        const id = (await contract.tokenOfOwnerByIndex(address, index)).toNumber()
-        userMolecules.push({ molecule: await contract.getSmiles(id), id })
-        // console.log("~~~molecule",await contract.getSmiles(id))
+      // console.log("===address=",address)
+      const networkId = await web3.eth.net.getId()
+      // console.log("++++++networkId=",networkId)
+      // console.log("===contract=",contract)
+      if(networkId==56) { // binance smart chain
+        const balance = (await contract.balanceOf(address)).toNumber()
+        for (let index = 0; index < balance; index++) {
+          const id = (await contract.tokenOfOwnerByIndex(address, index)).toNumber()
+          userMolecules.push({ molecule: await contract.getSmiles(id), id })
+          // console.log("~~~molecule",await contract.getSmiles(id))
 
+        }
+
+        namedMolecules = await Promise.all(
+          userMolecules.map(async (nft) => ({ ...nft, name: await fetchNameById(nft.id) }))
+        )
       }
 
-      const namedMolecules = await Promise.all(
-        userMolecules.map(async (nft) => ({ ...nft, name: await fetchNameById(nft.id) }))
-      )
+      setNetworkId(networkId)
 
       return namedMolecules
     },
-    [contract, walletAddress]
+    [contract, walletAddress, networkId]
   )
 
   const smilesMolecule = useCallback(async (id) => await contract.getSmiles(id), [contract])
@@ -339,6 +364,7 @@ const Provider = ({ children }) => {
         totalSupply,
         nameMolecule,
         walletAddress,
+        networkId,
       }}
     >
       {children}

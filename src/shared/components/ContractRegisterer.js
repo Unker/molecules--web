@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, createContext } from 'react'
 import formatURI from '@utils/formatURI'
 
 // const contractAddress = '0xd4e4078ca3495de5b1d4db434bebc5a986197782'
-const contractAddress = '0x3c24A5DF4F69199962b163CB5762be1E8367CbEb'
+const contractAddress = '0xd9BC9fd7a78dB7AAE56714342A5c69e55A852775'
 
 const ContractContext = createContext()
 
@@ -191,8 +191,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -205,8 +204,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -219,8 +217,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -233,8 +230,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -247,8 +243,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -261,8 +256,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -301,8 +295,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -315,8 +308,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -339,7 +331,7 @@ const ContractRegisterer = ({ web3 }) => {
                 "type": "string"
               }
             ],
-            "name": "createPunk",
+            "name": "createMolecule",
             "outputs": [
               {
                 "internalType": "string",
@@ -348,8 +340,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "payable",
-            "type": "function",
-            "payable": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -368,8 +359,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -382,8 +372,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -402,8 +391,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -427,8 +415,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -447,8 +434,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -467,8 +453,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -528,8 +513,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -571,8 +555,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -642,8 +625,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],
@@ -676,8 +658,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -695,8 +676,7 @@ const ContractRegisterer = ({ web3 }) => {
             "name": "changeName",
             "outputs": [],
             "stateMutability": "payable",
-            "type": "function",
-            "payable": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -715,8 +695,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -735,8 +714,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "pure",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -755,8 +733,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "pure",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -800,8 +777,7 @@ const ContractRegisterer = ({ web3 }) => {
             "name": "buy",
             "outputs": [],
             "stateMutability": "payable",
-            "type": "function",
-            "payable": true
+            "type": "function"
           },
           {
             "inputs": [
@@ -820,8 +796,7 @@ const ContractRegisterer = ({ web3 }) => {
               }
             ],
             "stateMutability": "view",
-            "type": "function",
-            "constant": true
+            "type": "function"
           },
           {
             "inputs": [],

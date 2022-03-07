@@ -19,14 +19,40 @@ import { useEffect, useState } from 'react'
 
 const Intro = () => {
   const { connected } = useWeb3()
-  const { nfts } = useContracts()
+  const { nfts, networkId } = useContracts()
+
+  let chainText
+
+  if (networkId!=56) {
+    if(networkId==1) {chainText = 'Ethereum'}
+    else if(networkId==137) {chainText = 'Polygon'}
+    else chainText=networkId.toString()
+  } else {
+    chainText = ""
+  }
+  // console.log("networkId=",networkId)
 
 
   return (
     <>
 
+      {networkId && networkId!=56 ? (
+        <Card className={cn(s.card, s.warn)}>
+          <h2 className={cn(s.h2, s.warn)}>WARNING</h2>
+          <p className={s.p}>
+            Your chain is {chainText} (non Binance Smart Chain). Please, switch the chain 
+            and refresh the page.
+          </p>
+          <p className={s.p}>
+            <a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank">
+              How to connect MetaMask to Binance Smart Chain
+            </a>
+          </p>
+        </Card>
+      ) : null}
+
       <Card className={s.card}>
-        <h2 className={s.h2}>          
+        <h2 className={s.h2}>        
           We propose the drug-likeness molecules produced by artificial intelligence (AI) 
           using the Generative adversarial network (GAN). 
           Each molecule will be registered on an ERC721 compatible smart contract on the Binance Smart Chain, 
