@@ -9,13 +9,15 @@ import LinkWalletButton from './LinkWalletButton'
 import cn from 'classnames'
 import s from './Main.module.css'
 
-
 import parse from 'html-react-parser';
 import { Helmet } from 'react-helmet'
 import FAQ from './FAQ'
 import RoadMap from './RoadMap'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react'
+
+import logoRdkit from '/src/res/img/logo_rdkit.png'
+
 
 const Intro = () => {
   const { connected } = useWeb3()
@@ -31,7 +33,6 @@ const Intro = () => {
     chainText = ""
   }
   // console.log("networkId=",networkId)
-
 
   return (
     <>
@@ -198,7 +199,7 @@ const Intro = () => {
             <img className={s.img} src="https://deepchem.io/assets/img/deepchem_logo.png"/>
           </a>
           <a href="http://www.rdkit.org/">
-            <img className={s.img} src="http://www.rdkit.org/Images/logo.png"/>
+            <img className={s.img} src={logoRdkit}/>
           </a>
           <a className={s.grok} href="https://datagrok.ai/">
             datagrok
