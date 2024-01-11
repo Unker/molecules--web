@@ -74,7 +74,7 @@ const MintButton = () => {
 
   if (saleStarted) {
     if (!saleEnded) {
-      buttonCopy = `Mint 1 Molecule for ${utils.fromWei(currentPrice,'ether')}`+` BNB`
+      buttonCopy = `Mint 1 Molecule for ${utils.fromWei(currentPrice,'ether')}`+` ETH`
       buttonStartText = 'Pause sale'
     } else {
       buttonCopy = 'All Molecules have been sold out!'

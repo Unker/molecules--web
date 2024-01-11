@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 32px 4vw;
-  width: var(--content-width);
 }
 
 .h2 {

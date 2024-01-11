@@ -114,7 +114,7 @@ const Molecule = () => {
             <span>
               Price 
               {buyPrice ? 
-                ` : `+`${utils.fromWei(buyPrice, "ether")}`+` BNB` 
+                ` : `+`${utils.fromWei(buyPrice, "ether")}`+` ETH` 
                 : ' not set'}{' '}
             </span>
           </h2>

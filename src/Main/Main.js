@@ -25,8 +25,9 @@ const Intro = () => {
 
   let chainText
 
-  if (networkId!=56) {
+  if (networkId!=1) {
     if(networkId==1) {chainText = 'Ethereum'}
+    else if(networkId==56) {chainText = 'Binance smart chain'}
     else if(networkId==137) {chainText = 'Polygon'}
     else chainText=networkId.toString()
   } else {
@@ -37,17 +38,12 @@ const Intro = () => {
   return (
     <>
 
-      {networkId && networkId!=56 ? (
+      {networkId && networkId!=1 ? (
         <Card className={cn(s.card, s.warn)}>
           <h2 className={cn(s.h2, s.warn)}>WARNING</h2>
           <p className={s.p}>
-            Your chain is {chainText} (non Binance Smart Chain). Please, switch the chain 
+            Your chain is {chainText} (non Ethereum). Please, switch the chain 
             and refresh the page.
-          </p>
-          <p className={s.p}>
-            <a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank">
-              How to connect MetaMask to Binance Smart Chain
-            </a>
           </p>
         </Card>
       ) : null}
@@ -56,7 +52,7 @@ const Intro = () => {
         <h2 className={s.h2}>        
           We propose the drug-likeness molecules produced by artificial intelligence (AI) 
           using the Generative adversarial network (GAN). 
-          Each molecule will be registered on an ERC721 compatible smart contract on the Binance Smart Chain, 
+          Each molecule will be registered on an ERC721 compatible smart contract on the Ethereum, 
           or in other words will be an non-fungible token (NFT).
         </h2>
 
@@ -123,15 +119,15 @@ const Intro = () => {
           stages:
           <br />
           <br />
-          >   1 -  511: 0.25 BNB
+          {'>'}   1 -  511: 0.025 ETH
           <br />
-          >  512 - 1023: 0.50 BNB
+          {'>'}  512 - 1023: 0.050 ETH
           <br />
-          > 1024 - 2047: 0.75 BNB
+          {'>'} 1024 - 2047: 0.075 ETH
           <br />
-          > 2048 - 3071: 1.5 BNB
+          {'>'} 2048 - 3071: 0.150 ETH
           <br />
-          > 3072 - 4096: 3.0 BNB
+          {'>'} 3072 - 4096: 0.300 ETH
         </p>
       </Card>
 
@@ -159,8 +155,8 @@ const Intro = () => {
           contract on-chain and call "getSmiles" with the given tokenID. Calling 
           will return the Simplified Molecular Input Line Entry System (SMILES), 
           it doesn't cost gas to call. Thus anyone can view the Molecule
-          on chain at any time, for free. Molecule value is linked to the Binance Smart Chain. 
-          So long as the Binance Smart Chain survives, so too will the Molecules.
+          on chain at any time, for free. Molecule value is linked to the Ethereum blockchain. 
+          So long as the Ethereum blockchain survives, so too will the Molecules.
         </p>
         <p className={s.p}>
           As a sort of "fallback" mechanism, and to ensure that the NFT Molecules
@@ -185,10 +181,7 @@ const Intro = () => {
  
       <Card className={s.card}>
         <h2 className={s.h2}>Powered by</h2>
-        <p className={s.p}>
-          <a href="https://asciipunks.com/">
-            <img className={s.img} src="https://asciipunks.com/ascii-punks-social.png" alt="ASCIIPunks"/>
-          </a>
+        <p className={cn(s.p, s.flex)}>
           <a href="https://pubchem.ncbi.nlm.nih.gov/">
             <img className={s.img} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/PubChem_logo.svg/128px-PubChem_logo.svg.png" alt="PubChem"/>
           </a>
@@ -196,7 +189,7 @@ const Intro = () => {
             <img className={s.img} src="https://www.dappuniversity.com/assets/logo_navbar-fe98a842d56267277b9fc8c4a8b079ae930b1f1c4d71f33792dcc0ad25ff00a0.png"/>
           </a>
           <a href="https://deepchem.io/">
-            <img className={s.img} src="https://deepchem.io/assets/img/deepchem_logo.png"/>
+            <img className={s.img} src="https://deepchem.io/deepchem.github.io/_next/static/media/deepchem-logo.95f3f074.png"/>
           </a>
           <a href="http://www.rdkit.org/">
             <img className={s.img} src={logoRdkit}/>

@@ -2,9 +2,9 @@
   display: block !important;
   font-size: calc(0.5em + 1vw);
   margin: 48px auto !important;
-  width: var(--content-width);
   background-color: var(--green);
   border-color: var(--green);
   color: var(--violet);
+  width: var(--content-width);
 }
 

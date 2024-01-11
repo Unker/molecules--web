@@ -1,6 +1,5 @@
 .card {
   margin: 0 4vw;
-  width: var(--content-width);
 }
 
 .card + .card {
@@ -77,10 +76,12 @@
 }
 
 .flex {
-/*  display: flex;
-  justify-content: space-between;*/
+ display: flex;
+  justify-content: center;
   font-style: italic;
   font-weight: bold;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .left {
@@ -119,7 +120,7 @@
   font-size: 24px;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
-  padding-left: 48px;
+  padding-left: 35px;
   background-image: url(https://datagrok.ai/img/logo.svg);
   background-repeat: no-repeat;
   background-size: 30px;
@@ -130,6 +131,8 @@
   align-items: center;*/
   margin-left: 0.5rem;
   margin-right: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .warn {

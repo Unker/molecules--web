@@ -123,28 +123,45 @@ const Token = ({ token, name, id, showId = true }) => {
     .catch(() => setOwner(""))
   }, [ownerOf])
 
+  const jmol_isReady = function(applet) {
+    document.title = (applet._id + " - Jmol " + Jmol.___JmolVersion)
+    // Jmol._getElement(applet, "appletdiv").style.border="1px solid blue"
+  }
+
   let Info = {
-    width: '350',
+    width: '400',
     height: '350',
     debug: false,
-    j2sPath: "/jmol/jsmol/jsmol/j2s",
+    // j2sPath: "/jmol/jsmol/jsmol/j2s",
+    j2sPath: "/jmol/jsmol/j2s",
     // color: "0xC0C0C0", // "0xfcfef6",
     color: "white", 
     disableJ2SLoadMonitor: true,
     disableInitialConsole: true,
     addSelectionOptions: false,
     // serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-    serverURL: "/jmol/jsmol/jsmol/php/jsmol.php",
+    // serverURL: "/jmol/jsmol/jsmol/php/jsmol.php",
+    serverURL: "/jmol/jsmol/php/jsmol.php",
     use: "HTML5",
     readyFunction: null,
     spinRateX: 0.2,
     spinRateY: 0.5,
     spinFPS: 20,
     spin: true,
+
+    // serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+    use: "WEBGL HTML5",
+    j2sPath: "./jmol/jsmol/j2s",
+    readyFunction: jmol_isReady,
+
     // script: 'load :smiles:CC/C=C/CC'
     // script: `load :smiles:${token}`
-    script: `load $${token}`,
-    // script: "load $caffeine"
+    // script: `load $${token}`,
+    // script: "load $caffeine",
+    // script: "set antialiasDisplay;load jmol/jsmol/data/caffeine.mol",
+    script: `set antialiasDisplay;load ASYNC $${token}`,
+    // script: `set antialiasDisplay;load ASYNC jmol/jsmol/data/taxol.mol`,
+    // script: `set antialiasDisplay;load ASYNC jmol/example1.mol`,
 
   }
   // console.log("Info", `load $${token}`);
@@ -258,7 +275,7 @@ const Token = ({ token, name, id, showId = true }) => {
       </h2>
       <pre className={s.token}>
         {buyPrice>0?(
-         <>{utils.fromWei(buyPrice, "ether")} BNB</>
+         <>{utils.fromWei(buyPrice, "ether")} ETH</>
         ) : <>not set</>}
 
         {owner == walletAddress ? (
@@ -376,7 +393,7 @@ const Token = ({ token, name, id, showId = true }) => {
         ) : (
           <div>
             <h2 className={cn(s.h2, s.modalTitle)}>
-              {"Request your price for the molecule, BNB"}
+              {"Request your price for the molecule, ETH"}
             </h2>
             <div className={s.inputWrapper}>
               <input
@@ -472,7 +489,7 @@ const Token = ({ token, name, id, showId = true }) => {
         ) : (
           <div>
             <h2 className={cn(s.h2, s.modalTitle)}>
-              You are going to buy this molecule at {utils.fromWei(buyPrice, "ether")} BNB
+              You are going to buy this molecule at {utils.fromWei(buyPrice, "ether")} ETH
             </h2>
             <div className={s.inputWrapper}>
               <Button

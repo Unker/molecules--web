@@ -151,15 +151,15 @@ const Provider = ({ children }) => {
     let currentPrice
 
     if (totalSupply < 512) {
-      currentPrice = '250000000000000000'
+      currentPrice = '25000000000000000'
     } else if (totalSupply >= 512 && totalSupply < 1024) {
-      currentPrice = '500000000000000000'
+      currentPrice = '50000000000000000'
     } else if (totalSupply >= 1024 && totalSupply < 2048) {
-      currentPrice = '750000000000000000'
+      currentPrice = '75000000000000000'
     } else if (totalSupply >= 2048 && totalSupply < 3072) {
-      currentPrice = '1500000000000000000'
+      currentPrice = '150000000000000000'
     } else {
-      currentPrice = '3000000000000000000'
+      currentPrice = '300000000000000000'
     }
     return currentPrice
   }, [totalMolecules])

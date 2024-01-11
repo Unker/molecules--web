@@ -75,13 +75,13 @@ const Title = () => {
       },
     "faq7": {
       "qst":"How can I buy a Molecule?",
-      "text":parse(`To buy a Molecule, you need to have an Binance Chain Wallet setup. A
+      "text":parse(`To buy a Molecule, you need to have an Ethereum Wallet setup. A
           commonly recommended one is
           <a href="https://metamask.io/" target="_blank">
             Metamask
           </a>
           . Get the Metamask Chrome extension, set up your wallet, and fund it
-          with binance BNB. Once you do that, you can use the "connect" button at the
+          with ETH. Once you do that, you can use the "connect" button at the
           top of the page to connect your wallet to the site. Then mint to your
           heart's content!
         `),

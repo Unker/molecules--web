@@ -2,7 +2,7 @@ const path = require('path')
 const Dotenv = require('dotenv-webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const HtmlWebpackPlugin =require('html-webpack-plugin');
-// const webpack =require('webpack');
+
 
 module.exports = {
   entry: ['react-hot-loader/patch', './src/index.js'],
