@@ -80,7 +80,7 @@ const Intro = () => {
 
         <div className={s.flex}>
           <div className={s.left}>
-            It is your molecule that could save millions of lives...
+            It is Your molecule that could save millions of lives...
             <br /> 
             ...or happen to be kind of a new Highly Hazardous Chemical!
           </div>

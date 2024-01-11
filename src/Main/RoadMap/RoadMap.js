@@ -32,12 +32,11 @@ const Title = () => {
         <tr>
           <td className={s.trmright}>
               <p className={s.p}>
-                We are going to build a model for predicting the drug-like molecules bind to important 
-                proteins in the human body.
-                This problem is of fundamental importance when creating new medicines. Targeted exposure 
-                to a specific protein gives a significant therapeutic effect often. For example, the breakthrough 
-                cancer drug "Imatinib" binds strongly to the BCR-ABL protein, which is one of the reasons for its 
-                effectiveness.
+                We are going to build up a model for predicting the drug-like molecules bind to important 
+                proteins in the human body. 
+                This issue is of fundamental importance creating new medicines and drugs. Targeted impact on 
+                to a specific protein often gives a significant therapeutic effect. For example, the breakthrough 
+                cancer drug "Imatinib" binds strongly with the BCR-ABL protein, which is one of its effectiveness couses.
               </p>
           </td>
         </tr>

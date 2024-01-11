@@ -62,7 +62,7 @@ const Title = () => {
       "qst":"What about the reliability of the generated molecules?",
       "text":parse(`One of the factors that we take into consideration when synthesizing a molecule is its size. 
           Molecules containing less than 10 atoms are unlikely to generate enough interaction energy 
-          o produce a measurable response in the process a biological experiment. Large molecules containing 
+          to produce a measurable response in the process a biological experiment. Large molecules containing 
           more than 50 atoms do not usually dissolve well in water and create additional problems in biological 
           experiments.
           <br />
