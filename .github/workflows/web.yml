@@ -1,4 +1,4 @@
-name: Netology AHJ
+name: NFT Molecules web
 
 on: [push, pull_request]
 
@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -30,16 +30,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
-      - name: Run linters
-        run: yarn run lint
+      # - name: Run linters
+      #   run: yarn run lint
 
       # - name: Run test
       #   run: yarn run coverage
 
       - name: Build
-        run: yarn run build
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
